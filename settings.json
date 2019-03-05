@@ -1,0 +1,7 @@
+{
+  "repos" : {
+    "steprescott-org/app": {
+      "pull_request": "steprescott-org/peril@app/pr.js",
+    }
+  }
+}
