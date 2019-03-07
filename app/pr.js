@@ -1,4 +1,8 @@
-import {message, danger} from "danger"
+import {danger, fail, message, warn} from 'danger'
 
-const modifiedMD = danger.git.modified_files.join("- ")
-message("Changed Files in this PR: \n - " + modifiedMD)
+// Ensure the PR body contains a link to the Jira ticket.
+const prBody = danger.github.pr.body
+const ticketUrlPattern = /https:\/\/developer\.bskyb\.com\/jira\/browse\/MSA-(\d+)/g
+if (!ticketUrlPattern.test(prBody)) {
+  fail("🔍 Please add a link to the Jira ticket.")
+}
