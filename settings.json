@@ -1,5 +1,5 @@
 {
   "rules" : {
-    "pull_request.labeled, pull_request.unlabeled": "app/pr.js",
+    "pull_request": "app/pr.js",
   }
 }
