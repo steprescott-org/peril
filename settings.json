@@ -1,4 +1,7 @@
 {
+  "settings": {
+    "disable_github_check": true
+  },
   "rules" : {
     "pull_request": "app/pr.js",
   }
